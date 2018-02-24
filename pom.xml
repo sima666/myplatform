@@ -14,11 +14,35 @@
 		<relativePath />
 	</parent>
 
+	<modules>
+		<module>myplatform-data-mybatis</module>
+	</modules>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
 		<mybatis.version>3.4.1</mybatis.version>
+		<mybatis.spring.version>1.3.0</mybatis.spring.version>
 		<myplatform.version>0.0.1-SNAPSHOT</myplatform.version>
 	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis</artifactId>
+				<version>${mybatis.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis-spring</artifactId>
+				<version>${mybatis.spring.version}</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+
+
 
 </project>
