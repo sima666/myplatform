@@ -34,6 +34,26 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
+				<groupId>com.lovemao</groupId>
+				<artifactId>myplatform-data-mybatis</artifactId>
+				<version>${myplatform.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.lovemao</groupId>
+				<artifactId>myplatform-api</artifactId>
+				<version>${myplatform.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.lovemao</groupId>
+				<artifactId>myplatform-service</artifactId>
+				<version>${myplatform.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.lovemao</groupId>
+				<artifactId>myplatform-security</artifactId>
+				<version>${myplatform.version}</version>
+			</dependency>
+			<dependency>
 				<groupId>org.mybatis</groupId>
 				<artifactId>mybatis</artifactId>
 				<version>${mybatis.version}</version>
@@ -51,7 +71,40 @@
 		</dependencies>
 	</dependencyManagement>
 
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<activeprofile>dev</activeprofile>
+			</properties>
+			<build>
+				<resources>
+					<resource>
+						<directory>src/main/resources</directory>
+						<filtering>true</filtering>
+						<includes>
+							<include>**/*.properties</include>
+							<include>**/*.xml</include>
+						</includes>
+					</resource>
+					<resource>
+						<directory>src/main/resources</directory>
+						<filtering>false</filtering>
+					</resource>
+					<resource>
+						<directory>src/main/java</directory>
+						<filtering>false</filtering>
+						<includes>
+							<include>**/*.xml</include>
+						</includes>
+					</resource>
 
-
+				</resources>
+			</build>
+		</profile>
+	</profiles>
 
 </project>
