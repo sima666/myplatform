@@ -17,6 +17,7 @@
 	<modules>
 		<module>myplatform-data-mybatis</module>
 		<module>myplatform-security</module>
+		<module>myplatform-api</module>
 	</modules>
 
 	<properties>
