@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lovemao.myplatform.security.mapper.SysUserMapper">
+
+	<resultMap id="sysUserMap"
+		type="com.lovemao.myplatform.security.domain.SysUser">
+		<id property="id" column="id" />
+		<result property="userId" column="userid" />
+		<result property="username" column="username" />
+		<result property="password" column="password" />
+		<collection property="roles" ofType="com.lovemao.myplatform.security.domain.SysRole">
+			<result column="rolename" property="roleName" />
+		</collection>
+
+	</resultMap>
+
+
+	 <select id="selectByUserName" parameterType="String" resultMap="sysUserMap">
+		SELECT
+		    u.id AS "id",
+			u.user_id AS "userid",
+			u.user_name AS "username",
+			u.password AS "password",
+			r.role_name AS "rolename"
+		FROM
+			t_plat_user u,
+			t_plat_user_role ur,
+			t_plat_role r
+		WHERE
+			u.user_id = ur.user_id
+		AND r.role_id = ur.role_id
+		AND u.user_name = #{username}
+    </select>
+
+</mapper>
