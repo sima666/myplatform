@@ -18,6 +18,8 @@
 		<module>myplatform-data-mybatis</module>
 		<module>myplatform-security</module>
 		<module>myplatform-api</module>
+		<module>myplatform-service</module>
+		<module>myplatform-web</module>
 	</modules>
 
 	<properties>
