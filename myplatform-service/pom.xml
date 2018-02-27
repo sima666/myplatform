@@ -17,5 +17,9 @@
 			<groupId>com.lovemao</groupId>
 			<artifactId>myplatform-data-mybatis</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.lovemao</groupId>
+			<artifactId>myplatform-validation</artifactId>
+		</dependency>
 	</dependencies>
 </project>

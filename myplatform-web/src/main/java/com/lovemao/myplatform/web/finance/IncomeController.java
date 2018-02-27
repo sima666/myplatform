@@ -19,9 +19,6 @@ public class IncomeController {
 
 	@RequestMapping(value = "/finance/income", method = RequestMethod.GET)
 	public String income() {
-		logger.info("===========income start===========");
-
-		logger.info("===========income enndd===========");
 		return "/finance/income";
 	}
 

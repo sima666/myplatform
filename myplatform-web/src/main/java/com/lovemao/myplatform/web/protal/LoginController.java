@@ -18,9 +18,6 @@ public class LoginController {
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login() {
-		logger.info("===========login start===========");
-
-		logger.info("===========login Enndd===========");
 		return "protal/login";
 	}
 }

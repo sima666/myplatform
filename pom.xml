@@ -55,6 +55,11 @@
 				<version>${myplatform.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>com.lovemao</groupId>
+				<artifactId>myplatform-validation</artifactId>
+				<version>${myplatform.version}</version>
+			</dependency>
+			<dependency>
 				<groupId>org.mybatis</groupId>
 				<artifactId>mybatis</artifactId>
 				<version>${mybatis.version}</version>
