@@ -20,6 +20,7 @@
 		<module>myplatform-api</module>
 		<module>myplatform-service</module>
 		<module>myplatform-web</module>
+		<module>myplatform-validation</module>
 	</modules>
 
 	<properties>
