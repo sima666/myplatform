@@ -22,4 +22,9 @@ public class IndexController {
 		return "index";
 	}
 
+	@RequestMapping(value = "/example", method = RequestMethod.GET)
+	public String header() {
+		return "common/example";
+	}
+
 }
