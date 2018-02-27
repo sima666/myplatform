@@ -21,6 +21,6 @@ public class LoginController {
 		logger.info("===========login start===========");
 
 		logger.info("===========login Enndd===========");
-		return "login";
+		return "protal/login";
 	}
 }
