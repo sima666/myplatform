@@ -9,10 +9,10 @@
 	<artifactId>myplatform-service</artifactId>
 
 	<dependencies>
-		<dependency>
-			<groupId>com.lovemao</groupId>
-			<artifactId>myplatform-security</artifactId>
-		</dependency>
+		<!-- security start -->
+		<!-- <dependency> <groupId>com.lovemao</groupId> <artifactId>myplatform-security</artifactId> 
+			</dependency> -->
+		<!-- security enndd -->
 		<dependency>
 			<groupId>com.lovemao</groupId>
 			<artifactId>myplatform-data-mybatis</artifactId>
