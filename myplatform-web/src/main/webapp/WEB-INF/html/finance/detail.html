@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:include="common/header_css :: commonHeader('Love Mao!')">
+</head>
+
+<body class="nav-md">
+	<div class="container body">
+		<div class="main_container">
+
+			<!-- left menu -->
+			<div th:replace="common/left_menu :: left_menu"></div>
+			<!-- left menu -->
+			<!-- top navigation -->
+			<div th:replace="common/topnavigation :: top_nav"></div>
+			<!-- /top navigation -->
+
+			<!-- page content -->
+			<div class="right_col" role="main"></div>
+			<!-- /page content -->
+
+			<!-- footer content -->
+			<footer> </footer>
+			<!-- /footer content -->
+		</div>
+	</div>
+
+	<div th:include="common/header_js :: headerJs"></div>
+
+</body>
+</html>
